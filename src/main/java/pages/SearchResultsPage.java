@@ -26,7 +26,7 @@ public class SearchResultsPage {
     private final SelenideElement sortButton = $(By.xpath("//button[@class='_3ooNj _1l_Gv']"));
     private final SelenideElement sortByPriceAscButton = $x("//span[contains(text(),'Подороже')]");
     // локатор для цены первого продукта в найденом списке
-    private final SelenideElement firstProductPrice = $(By.xpath(("//span[@data-auto='snippet-price-current']")));
+    private final SelenideElement firstProductPrice = Selenide.$$(By.xpath("//span[@data-auto='snippet-price-current']")).get(13);
 
     /**
      * Устанавливает фильтр по цене
